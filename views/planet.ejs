@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h2><%=planet%></h2>
+    <%- include("partials/nav.ejs") %>
+    <div class="card text-center">
+        <div class="container-fluid row p-5">
+            <div class="card col">
+                <img src=<%=planetInfo.image%> width=500 height="auto">
+            </div>
+            <div class="card col p-5">
+                <p>
+                    Planet Description: <%=planetInfo.description %>
+                </p>
+                <br>
+                <p>
+                    Distance From the Sun: <%=planetInfo.distanceFromSun %>
+                </p>
+                <br>
+                <p>
+                    Year Length: <%=planetInfo.yearLength %>
+                </p>
+                <br>
+                <p>
+                    Planet Radius: <%=planetInfo.radius %>
+                </p>
+                <br>
+                <p>
+                    Earth Days: <%=planetInfo.oneEarthDay %>
+                </p>
+                <br>
+                <p>
+                    Moons: <%=planetInfo.moons %>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include("partials/footer.ejs") %>
+
+</html>
