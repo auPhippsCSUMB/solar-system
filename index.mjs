@@ -42,14 +42,14 @@ app.get('/planets', async(req, res) => {
     let img = await data.url;
     let imgText;
 
-    if (!img) {
-        return res.render('planets.ejs', { img: null, imgText: null });
-    }
+    // if (!img) {
+    //     return res.render('planets.ejs', { img: null, imgText: null });
+    // }
 
-    if (img.substring(img.length-3, img.length) == "mp4") {
-        console.log("ITS MP4");
-        imgText = img;
-    }
+    // if (img.substring(img.length-3, img.length) == "mp4") {
+    //     console.log("ITS MP4");
+    //     imgText = img;
+    // }
     console.log(img);
     res.render('planets.ejs', {img, imgText});
 });
