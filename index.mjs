@@ -34,9 +34,9 @@ app.get('/planetInfo', (req, res) => {
 });
 
 app.get('/planets', async(req, res) => {
-    let date = new Date();
-    let today = date.getDate();
-    let url = "https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=" + date.toISOString().substring(0, 8) + today;
+    // let date = new Date();
+    // let today = date.getDate();
+    let url = "https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD";
     let response = await fetch(url);
     let data = await response.json();
     let img = await data.url;
