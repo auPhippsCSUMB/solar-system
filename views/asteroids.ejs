@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h2>Asteroids</h2>
+    <%- include("partials/nav.ejs") %>
+    <div class="card text-center">
+        <div class="container-fluid row p-5">
+            <div class="card col">
+                <img src=<%=asteroids.image%> width=500 height="auto">
+            </div>
+            <div class="card col p-5">
+                <p>
+                    Asteroids Definition: <%=asteroids.def %>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include("partials/footer.ejs") %>
+
+</html>
