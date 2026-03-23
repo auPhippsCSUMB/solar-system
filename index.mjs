@@ -39,8 +39,13 @@ app.get('/planets', async(req, res) => {
     let url = "https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=" + date.toISOString().substring(0, 8) + today;
     let response = await fetch(url);
     let data = await response.json();
-    let img = data.url;
+    let img = await data.url;
     let imgText;
+
+    if (!img) {
+        return res.render('planets.ejs', { img: null, imgText: null });
+    }
+
     if (img.substring(img.length-3, img.length) == "mp4") {
         console.log("ITS MP4");
         imgText = img;
